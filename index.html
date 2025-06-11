@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid Craft</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="https://www.shutterstock.com/image-vector/sudoku-board-game-icon-black-260nw-2142672629.jpg" alt="Sudoku Icon" />
+      <h1>Grid Craft</h1>
+    </div>
+    <div class="nav-controls">
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button id="newGameBtn"><i class="fas fa-plus"></i> New Game</button>
+      <button id="resetBtn"><i class="fas fa-undo"></i> Reset</button>
+      <button id="checkBtn"><i class="fas fa-check"></i> Check</button>
+      <button id="hintBtn"><i class="fas fa-lightbulb"></i> Hint</button>
+      <button id="toggleDark"><i class="fas fa-moon"></i> Mode</button>
+    </div>
+  </nav>
+
+  <main class="game-container">
+    <div class="sudoku-grid" id="sudokuGrid"></div>
+
+    <section class="stats">
+      <p><i class="fas fa-clock"></i> <strong>Timer:</strong> <span id="timer">00:00</span></p>
+      <p><i class="fas fa-trophy"></i> <strong>Puzzles Solved:</strong> <span id="solved">0</span></p>
+      <p><i class="fas fa-star"></i> <strong>Fastest Time:</strong> <span id="fastest">--</span></p>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Reset Game</h3>
+      <p>Are you sure you want to reset the board?</p>
+      <div class="modal-buttons">
+        <button id="confirmReset">Yes</button>
+        <button id="cancelReset">No</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
